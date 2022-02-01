@@ -116,10 +116,8 @@ class DayNight {
 
     next() {
         this.changePosition()
-        this.validateView();
+        // this.validateView();
     }
-
-    validateView = () => { }
 
     changePosition() {
         this.currentX = Math.cos(this.currentAngle) * this.radiusX() - this.object.height() / 2;
@@ -149,26 +147,6 @@ class DayNight {
     }
 }
 
-function sunView() {
-    // if (this.currentAngle >= Math.PI) {
-    //     this.object.addClass("sun");
-    //     this.object.removeClass("moon");
-    // }
-    // if (this.currentAngle < Math.PI || this.currentAngle >= 2 * Math.PI) {
-    //     this.object.addClass("moon");
-    //     this.object.removeClass("sun");
-    // }
-}
-function moonView() {
-    // if (this.currentAngle >= Math.PI) {
-    //     this.object.addClass("sun");
-    //     this.object.removeClass("moon");
-    // }
-    // if (this.currentAngle < Math.PI || this.currentAngle >= 2 * Math.PI) {
-    //     this.object.addClass("moon");
-    //     this.object.removeClass("sun");
-    // }
-}
 function timeRender() {
     let time = this.updateTime == 0 ? 1 : this.updateTime;
     $("#scale").html((1000 / time).toLocaleString('ru-ru', { maximumFractionDigits: 2 }));
@@ -187,9 +165,7 @@ var sunObj;
 var moonObj;
 $(document).ready(() => {
     sunObj = new DayNight($("#sun"), Math.PI, $("#sky"));
-    sunObj.validateView = sunView;
     moonObj = new DayNight($("#moon"), 0, $("#sky"));
-    moonObj.validateView = sunView;
     timer.AddObserver(sunObj)
         .AddObserver(moonObj)
         .next();
