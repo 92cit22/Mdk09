@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day/Night</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="timer">
+        <p class="time">
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </p>
+        <p class="scale">
+            <span>1 sec :</span>
+            <span id="scale">10</span>
+            <span>min</span>
+        </p>
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="stop">Stop</button>
+    </div>
+    <main>
+        <div id="sky">
+            <div class="objs">
+                <div class="sun" id="sun"></div>
+                <div class="moon" id="moon"></div>
+            </div>
+            <div id="grass"></div>
+            <div id="earth"></div>
+        </div>
+    </main>
+    <script src="./jquery.js"></script>
+    <script src="./script.ts"></script>
+</body>
+
+</html>

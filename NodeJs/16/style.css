@@ -1,0 +1,57 @@
+:root{
+    --round: min(10vh, 10vw);
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#sky{
+    position: absolute;
+    background: skyblue;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+    vertical-align: middle;
+}
+#sky.night{
+    background-color: rgb(42 62 70);
+}
+#sky > div:first-child{
+    height: 50%;
+}
+#sky > div:not(:first-child){
+    z-index: 2;
+}
+#grass{
+    background-color: green;
+    height: 5%;
+}
+#earth{
+    background-color: brown;
+    height: 45%;
+}
+
+.sun{
+    background-color: yellow;
+    left: calc(2vw + (var(--round)/2));
+}
+.moon{
+    background: radial-gradient( 60% 90%, transparent 45%, yellow 60%);
+    background-size: 150% 100%;
+    background-position-x: right;
+    right: calc(2vw + (var(--round)/2));
+}
+.timer{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+}
+.objs > div{
+    position: absolute;
+    top: 45vh;
+    height: var(--round);
+    width: var(--round);
+    z-index: -1;
+    border-radius: 50%;
+}
