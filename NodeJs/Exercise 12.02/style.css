@@ -1,0 +1,45 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+body > *{
+    text-align: center;
+}
+.body-flex{
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content:center;
+}
+
+.body-flex > *{
+    padding: 2vmin;
+}
+
+.body-flex > div:hover{
+    background-color: #c4c4c4;
+    cursor: pointer;
+}
+
+.body-flex.second{
+    /* position: absolute; */
+    color: white;
+}
+
+.body-flex.second > *{
+    font-weight: bold;
+    font-size: larger;
+    background-color: #000;
+}
+
+table{
+    margin: auto;
+}
+tr{
+    width: 50vw;
+}
+td{
+    border: 1px solid;
+}
