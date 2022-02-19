@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    display: flex;
+}
+
+body>*{
+    display: inline-block;
+    border: 1px solid black;
+}
+main{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.side{
+    width: 10%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.elem{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
